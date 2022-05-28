@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Electric Longboard.ma
-//Last modified: Sat, May 28, 2022 05:52:13 PM
+//Last modified: Sat, May 28, 2022 05:55:25 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.0";
@@ -10,14 +10,14 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19043)";
-fileInfo "UUID" "CC51F511-46D7-3FEE-51F8-AF8BA5246A52";
+fileInfo "UUID" "B7810B64-433C-49DF-FBB9-3A98FAC28196";
 createNode transform -s -n "persp";
 	rename -uid "7905401B-4E70-33FD-7539-B2B96B10942F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -12.324332068012891 5.3054577125562012 25.721441269680238 ;
-	setAttr ".r" -type "double3" -10.589500549653014 -24.596756259755711 1.0100361751827518e-13 ;
-	setAttr ".rp" -type "double3" -2.2204460492503131e-16 2.3592239273284576e-16 0 ;
-	setAttr ".rpt" -type "double3" 7.4267332495492724e-16 -1.5982809113103649e-15 4.0481899488674411e-15 ;
+	setAttr ".t" -type "double3" -15.755372722114121 4.5031443803226203 23.87869156238904 ;
+	setAttr ".r" -type "double3" -8.9800685408584933 -32.415740575415185 -1.3704729104485498e-13 ;
+	setAttr ".rp" -type "double3" -3.3306690738754696e-16 9.9920072216264089e-16 0 ;
+	setAttr ".rpt" -type "double3" 9.5283834890999758e-16 -1.7529127405117264e-15 4.0426992868184389e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7416D104-4FB0-3733-4FC8-A5BBEB9AA246";
 	setAttr -k off ".v" no;
@@ -26,7 +26,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.05355214254971763 -0.25424307918341338 -1.3182470378642179 ;
+	setAttr ".tp" -type "double3" 0.26343225119860492 -0.2191320739685505 -1.3475849466231544 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "E695E49A-4EF4-ACDB-1C89-9693D82EDD85";
