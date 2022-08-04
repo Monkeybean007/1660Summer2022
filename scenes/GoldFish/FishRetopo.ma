@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: FishRetopo.ma
-//Last modified: Wed, Aug 03, 2022 06:02:46 PM
+//Last modified: Thu, Aug 04, 2022 11:24:12 AM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.0";
@@ -11,23 +11,23 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19043)";
-fileInfo "UUID" "4B93A0B0-4A02-2AB8-7AB7-92ABE61875FE";
+fileInfo "UUID" "197C200C-4649-EC92-0E46-11BB7F4C619E";
 createNode transform -s -n "persp";
 	rename -uid "7D743C5B-434F-0A84-05AD-C7A0424C429E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.7578198051933605 8.6752900351222628 10.556848067372766 ;
-	setAttr ".r" -type "double3" -25.912664101393993 40.130285511050701 4.1598671977797371e-14 ;
-	setAttr ".rp" -type "double3" -1.6653345369377348e-15 -6.6613381477509392e-16 -3.5527136788005009e-15 ;
-	setAttr ".rpt" -type "double3" -2.2432168363287194e-15 -3.6493042783882723e-15 2.5314470917167269e-15 ;
+	setAttr ".t" -type "double3" 12.896091302235934 -11.512204893249498 12.884453883198571 ;
+	setAttr ".r" -type "double3" 35.264389682754697 45.000000000000007 1.7991934265579786e-14 ;
+	setAttr ".rp" -type "double3" -3.8857805861880479e-16 2.2204460492503131e-15 -3.5527136788005009e-15 ;
+	setAttr ".rpt" -type "double3" -1.7085928694356098e-15 1.1702346702772779e-15 2.5988005839602346e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "909E5A31-47C9-D01C-574E-D0826A498B60";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 16.095876357580529;
+	setAttr ".coi" 22.336685354519716;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.42659261871201259 1.6413822935798255 -0.51245980603380481 ;
+	setAttr ".tp" -type "double3" 3.5527136788005009e-15 1.3838864089864327 -0.011637419037349161 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "DB530278-42D7-7AB7-5356-648430EBE7A4";
@@ -7458,7 +7458,7 @@ createNode polyNormal -n "polyNormal1";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "86DE428A-4D5B-3C76-EDD2-CFAEEB50C0A2";
+	rename -uid "F96B0475-47CF-C37C-73A1-1797E63311AD";
 	setAttr ".pee" yes;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -72.619044733426051 -59.523807158545942 ;
