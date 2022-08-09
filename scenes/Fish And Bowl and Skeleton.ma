@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Fish And Bowl and Skeleton.ma
-//Last modified: Mon, Aug 08, 2022 11:17:30 PM
+//Last modified: Tue, Aug 09, 2022 03:46:46 PM
 //Codeset: 1252
 requires maya "2023";
 requires "mtoa" "5.1.0";
@@ -11,23 +11,23 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19043)";
-fileInfo "UUID" "331A0D0D-4318-6419-DB0C-F4BF52CBA0E5";
+fileInfo "UUID" "3AC4332A-49A2-F6AD-97F2-94878C5B2AB6";
 createNode transform -s -n "persp";
 	rename -uid "7D743C5B-434F-0A84-05AD-C7A0424C429E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -9.7767410378467225 19.840227278058315 -17.195471563813364 ;
-	setAttr ".r" -type "double3" 129.16062414360809 -9.0658708644543911 180 ;
-	setAttr ".rp" -type "double3" -8.8817841970012523e-16 8.8817841970012523e-16 0 ;
-	setAttr ".rpt" -type "double3" -9.6106852103791408e-16 -2.4332032679951944e-15 2.4354924212645586e-15 ;
+	setAttr ".t" -type "double3" 23.092970456666475 25.834140596188963 7.6051336782591239 ;
+	setAttr ".r" -type "double3" -48.799192895272803 67.413722874033553 -2.4843283378875252e-14 ;
+	setAttr ".rp" -type "double3" 1.5543122344752192e-15 1.3322676295501878e-15 0 ;
+	setAttr ".rpt" -type "double3" -6.2804288299530734e-15 -6.4387183926100892e-16 3.1492168676391934e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "909E5A31-47C9-D01C-574E-D0826A498B60";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 24.655342979833833;
+	setAttr ".coi" 40.294405316112808;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -7.3234152102011709 0.72300046574279264 -1.820206725667223 ;
+	setAttr ".tp" -type "double3" -1.4132501578676617 -4.4835968253120733 -2.5889356079424504 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "DB530278-42D7-7AB7-5356-648430EBE7A4";
@@ -16518,20 +16518,54 @@ createNode mesh -n "pasted__polySurfaceShape1" -p "pasted__polySurface1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder1";
+	rename -uid "3E9B4123-470C-A4B8-7629-559A8AEEAA23";
+	setAttr ".t" -type "double3" -0.0058556032505423516 1.8851912816823617 -0.052337872123276785 ;
+	setAttr ".s" -type "double3" 2.8558142599339327 2.60765763392487 2.8558142599339327 ;
+createNode mesh -n "Water" -p "pCylinder1";
+	rename -uid "94F83EED-4124-082C-5CE3-2DBFC5E7EC21";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.32577927433885634 0.66656848788261414 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 42 ".pt[0:41]" -type "float3"  0.049356204 0.062863663 -0.014668633 
+		0.041985162 0.062863663 -0.027901411 0.030503925 0.062863663 -0.038402982 0.016036892 
+		0.062863663 -0.045145378 6.1865282e-09 0.062863663 -0.047468357 -0.016036816 0.062863663 
+		-0.045145437 -0.030503921 0.062863663 -0.038402781 -0.041984811 0.062863663 -0.027901417 
+		-0.049356375 0.062863663 -0.014668677 -0.051896337 0.062863663 2.430809e-08 -0.049356375 
+		0.062863663 0.014668669 -0.041984826 0.062863663 0.027901411 -0.030503847 0.062863663 
+		0.038402915 -0.016036823 0.062863663 0.045145497 4.6398831e-09 0.062863663 0.047468416 
+		0.016036905 0.062863663 0.045145556 0.030503921 0.062863663 0.038402885 0.041984811 
+		0.062863663 0.027901433 0.049356375 0.062863663 0.014668625 0.051896337 0.062863663 
+		2.430809e-08 -0.18410397 -0.062863663 0.039291427 -0.15660812 -0.062863663 0.074736528 
+		-0.11378247 -0.062863663 0.1028663 -0.059818987 -0.062863663 0.12092659 -2.3076311e-08 
+		-0.062863663 0.12714988 0.059818968 -0.062863663 0.12092655 0.1137824 -0.062863663 
+		0.10286634 0.1566081 -0.062863663 0.074736573 0.18410383 -0.062863663 0.039291374 
+		0.19357827 -0.062863663 3.8304038e-10 0.18410383 -0.062863663 -0.039291378 0.1566081 
+		-0.062863663 -0.074736528 0.11378239 -0.062863663 -0.10286623 0.05981895 -0.062863663 
+		-0.12092651 -1.7307253e-08 -0.062863663 -0.12714982 -0.059818894 -0.062863663 -0.12092654 
+		-0.1137824 -0.062863663 -0.10286628 -0.1566081 -0.062863663 -0.074736632 -0.18410383 
+		-0.062863663 -0.039291319 -0.19357827 -0.062863663 3.8304038e-10 -3.6747117e-08 0 
+		-3.164002e-08 -5.599081e-08 0 -4.6238252e-08;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B4DBADDA-437B-B368-A860-EC8110EA6D76";
-	setAttr -s 5 ".lnk";
-	setAttr -s 5 ".slnk";
+	rename -uid "E5A7CE0A-4FEE-5347-DF2D-CA91C5092615";
+	setAttr -s 6 ".lnk";
+	setAttr -s 6 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "08F290AA-45A8-FD1D-6568-DDB43C67B334";
+	rename -uid "8DB5FAF8-4A01-398A-7AB7-E4BB07B9F677";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A0D38747-43A9-E88D-7E60-BF98C0B75A4D";
+	rename -uid "32FB3322-44D1-8C80-F595-2BAE878DEBF0";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "377B624D-4605-7D4F-5631-9F8B55A86D8C";
+	rename -uid "03C54D3F-4FB4-D208-9F77-EB8D4DDE4F86";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "88C43B9A-4403-7588-8E21-6E9D9458E11D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E67CB0FF-42D1-9EE2-CE2A-55AB1402D59A";
+	rename -uid "5F4350E8-4803-D371-3348-EEBB7BFD57B6";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B2B65444-45AD-CE92-2B0E-AEA18391A56C";
 	setAttr ".g" yes;
@@ -16590,7 +16624,6 @@ createNode polyBoolean -n "polyBoolean1";
 createNode shadingEngine -n "lambert2SG";
 	rename -uid "3BBA2EEA-4BD9-6349-F8BD-DBB1AC441854";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "9919C4C8-46F8-159B-E04F-40B7FA8798E2";
@@ -16637,6 +16670,28 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[5].x" 174.28572082519531;
 	setAttr ".tgi[0].ni[5].y" 128.57142639160156;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
+createNode polyCylinder -n "polyCylinder1";
+	rename -uid "E8B1DF33-4513-69AB-CFFB-06B76E25ED52";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polyAutoProj -n "polyAutoProj1";
+	rename -uid "DF9FAE42-4B96-72F5-4321-86A683EA7396";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".ix" -type "matrix" 2.8558142599339327 0 0 0 0 2.60765763392487 0 0 0 0 2.8558142599339327 0
+		 -0.0058556032505423516 1.8851912816823617 -0.052337872123276785 1;
+	setAttr ".s" -type "double3" 5.7116302220658106 5.7116302220658106 5.7116302220658106 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode blinn -n "blinn3";
+	rename -uid "29EE8DAD-4786-3A96-9563-9BB4FF958602";
+createNode shadingEngine -n "blinn3SG";
+	rename -uid "BD48AECC-4721-EE44-0DE0-68A681554489";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo4";
+	rename -uid "BEC017B6-4791-5E9A-F6E7-35AD56F009E8";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -16647,10 +16702,10 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 5 ".st";
+	setAttr -s 6 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 8 ".s";
+	setAttr -s 9 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -16676,19 +16731,20 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "polyBoolean1.out" "polySurfaceShape1.i";
+connectAttr "polyAutoProj1.out" "Water.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "blinn3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "blinn3SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "blinn1.oc" "lambert2SG.ss";
@@ -16715,11 +16771,19 @@ connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni
 		;
 connectAttr "lambert4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
+connectAttr "polyCylinder1.out" "polyAutoProj1.ip";
+connectAttr "Water.wm" "polyAutoProj1.mp";
+connectAttr "blinn3.oc" "blinn3SG.ss";
+connectAttr "Water.iog" "blinn3SG.dsm" -na;
+connectAttr "blinn3SG.msg" "materialInfo4.sg";
+connectAttr "blinn3.msg" "materialInfo4.m";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
+connectAttr "blinn3SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn1.msg" ":defaultShaderList1.s" -na;
 connectAttr "blinn2.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert4.msg" ":defaultShaderList1.s" -na;
+connectAttr "blinn3.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of Fish And Bowl and Skeleton.ma
